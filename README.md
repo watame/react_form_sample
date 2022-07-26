@@ -24,3 +24,4 @@ react_form_sample
 
 # 参考
 - https://zenn.dev/rihito/articles/96dfad8d4990f9
+- https://typescriptbook.jp/tutorials/react-like-button-tutorial
