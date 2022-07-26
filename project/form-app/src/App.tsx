@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import axios from './services/Axios'
+import requests from './services/Requests'
 
 function App() {
   return (
@@ -16,8 +18,12 @@ function SampleButton() {
   const [message, setMessage] = useState('Before API🥺');
   const handleClick = () => {
     // Axiosで通信してみよーっと
-
-    setMessage('After API😎')
+    async function fetchData() {
+      const response = await axios.get(requests.fetchTasks)
+      console.log(response)
+      setMessage('After API😎')
+    }
+    fetchData()
   }
   return (
     <span className='SampleButton' onClick={handleClick}>
