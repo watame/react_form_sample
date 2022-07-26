@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./project/form-app:/form-app
+    command: [ yarn, start ]
+    ports:
+      - "3000:3000"
+    stdin_open: true
