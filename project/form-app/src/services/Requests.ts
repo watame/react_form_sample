@@ -1,5 +1,5 @@
 const requests = {
-    fetchTasks: `/tasks`,
+    Tasks: `/tasks`,
 };
 
 export default requests;
